@@ -21,6 +21,9 @@ function buyTicket(e) {
         ticket.classList.add('bg-[#F7F8F8]'); // adding prev bg color
         const idx = selectedSeats.indexOf(e.target.id);
         selectedSeats.splice(idx, 1);
+
+        // remove seat from the cart list
+        removeSeatFromCart(e.target.id);
     }
 }
 
@@ -41,6 +44,20 @@ function addToCart(id, value) {
     // appending the new cart element to the existing cart list
     cartList.appendChild(newCartElement)
 }
+
+
+// function to remove seat from the cart list
+function removeSeatFromCart(id){
+    const seatIdOnCart = `cart_${id}`;
+    const cartList = document.getElementById('cartList');
+
+    const seatInfoElemOnCart = document.getElementById(seatIdOnCart);
+    cartList.removeChild(seatInfoElemOnCart);
+    
+}
+
+
+
 
 
 // seat blocks
