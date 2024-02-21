@@ -69,7 +69,7 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main class="bg-[#F7F8F8]">
     <!-- banner section -->
     <div class="mx-[3vw] relative">
       <img class="w-full h-full" src="images/banner.png" alt="">
@@ -118,7 +118,7 @@
     </section>
 
     <!-- paribahan section -->
-    <section class="bg-[#F7F8F8] w-full h-[605px] border-t-2 border-[rgb(29,209,0)] rounded-t-xl mt-16">
+    <section class="bg-[#F7F8F8] w-full h-[605px] border-t-2 border-[rgb(29,209,0)] rounded-t-[88px] mt-16">
       <div class="mx-[3vw] text-center mt-7">
         <h1 class="font-bold text-4xl text-[#030712]">P.H Paribahan</h1>
         <p class="text-lg text-[#03071299] mt-5 mb-7">Yes, you can run unit tests and view the results directly within
@@ -172,7 +172,103 @@
         </div>
       </div>
     </section>
+
+    <!-- buy ticket section -->
+    <section class="mx-[3vw] bg-white rounded-xl p-8 flex">
+      <!-- select your seats -->
+      <div class="flex-grow border-r-2 border-dashed pr-8">
+        <!-- title -->
+        <h2 class="text-2xl font-semibold text-[#030712]">Select Your Seat</h2>
+        <!-- all seats -->
+        <div class="flex justify-between items-center my-6 border-y-2 border-dashed py-4">
+          <!-- available -->
+          <div class="flex justify-center items-center gap-2">
+            <img src="./images/seat-gray.png" alt="Seat gray">
+            <p class="text-[#03071280] font-inter font-medium text-lg">Available</p>
+          </div>
+          <!-- Selected -->
+          <div class="flex justify-center items-center gap-2">
+            <img src="./images/seat-green-filled.png" alt="Seat Green">
+            <p class="text-[#1DD100] font-inter font-medium text-lg">Selected</p>
+          </div>
+        </div>
+        <!-- driver seat -->
+        <div class="flex">
+          <div class="flex-grow"></div>
+          <div class="py-4 px-11 bg-[#0307121A] rounded-xl">
+            <svg width="26.000000" height="26.000000" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs />
+              <path id="Vector"
+                d="M1.91333 17.5922C2.5166 19.0481 3.40039 20.371 4.51465 21.4853C5.62891 22.5996 6.9519 23.4835 8.40771 24.0865C9.86377 24.6896 11.4241 25 13 25C14.5759 25 16.1362 24.6896 17.5923 24.0865C19.0481 23.4835 20.3711 22.5996 21.4854 21.4853C22.5996 20.371 23.4834 19.0481 24.0867 17.5922C24.6897 16.1363 25 14.5759 25 13C25 11.4241 24.6897 9.86371 24.0867 8.40781C23.4834 6.9519 22.5996 5.62903 21.4854 4.51471C20.3711 3.40042 19.0481 2.51651 17.5923 1.91345C16.1362 1.31039 14.5759 1 13 1C11.4241 1 9.86377 1.31039 8.40771 1.91345C6.9519 2.51651 5.62891 3.40042 4.51465 4.51471C3.40039 5.62903 2.5166 6.9519 1.91333 8.40781C1.3103 9.86371 1 11.4241 1 13C1 14.5759 1.3103 16.1363 1.91333 17.5922ZM11.1145 14.8856C11.6145 15.3857 12.2927 15.6667 13 15.6667C13.7073 15.6667 14.3855 15.3857 14.8855 14.8856C15.3857 14.3855 15.6667 13.7072 15.6667 13C15.6667 12.2928 15.3857 11.6145 14.8855 11.1144C14.3855 10.6143 13.7073 10.3333 13 10.3333C12.2927 10.3333 11.6145 10.6143 11.1145 11.1144C10.6143 11.6145 10.3333 12.2928 10.3333 13C10.3333 13.7072 10.6143 14.3855 11.1145 14.8856ZM13 15.6667L13 25M10.3333 13L1.33325 10.3333M15.6667 13L24.6667 10.3333"
+                stroke="#030712" stroke-opacity="0.700000" stroke-width="2.000000" stroke-linejoin="round"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+        <!-- passenger seats -->
+        <div class="font-inter font-medium text-lg text-[#03071280] space-y-6 mt-6">
+          <!-- A block -->
+          <div class="flex justify-center items-center gap-6">
+            <p>A</p>
+            <div class="w-full flex justify-between">
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="A1">A1</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="A2">A2</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="A3">A3</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="A4">A4</div>
+            </div>
+          </div>
+
+          <!-- B block -->
+          <div class="flex justify-center items-center gap-6">
+            <p>B</p>
+            <div class="w-full flex justify-between">
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="B1">B1</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="B2">B2</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="B3">B3</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="B4">B4</div>
+            </div>
+          </div>
+
+          <!-- C block -->
+          <div class="flex justify-center items-center gap-6">
+            <p>C</p>
+            <div class="w-full flex justify-between">
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="C1">C1</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="C2">C2</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="C3">C3</div>
+              <div class="px-11 py-4 bg-[#F7F8F8] rounded-xl select-none cursor-pointer" id="C4">C4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- cart section -->
+      <div class="border-l-2 border-dashed pl-8">
+        <!-- title -->
+        <h2 class="text-2xl font-semibold text-[#030712] pb-6 border-b-2 border-dashed mb-6">Cart</h2>
+        <!-- cart info -->
+        <div class="font-inter p-8 bg-[#F7F8F8] rounded-xl">
+          <!-- headings -->
+          <div class="flex gap-20 justify-between items-center font-medium text-[#030712] pb-4 border-b-2 border-dashed">
+            <div class="relative">
+              <h2>Seats</h2>
+              <p class="absolute -top-1 -right-4 bg-[#1DD100] text-xs font-bold rounded text-white px-1">4</p>
+            </div>
+            <h2>Class</h2>
+            <h2>Price</h2>
+          </div>
+
+          <!-- selected seats info -->
+          <div id="cartList" class="space-y-4 my-4">
+            <!-- all the selected seats info will be added when clicked a seat -->
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <script src="js/script.js" defer></script>
 </body>
 
 </html>
