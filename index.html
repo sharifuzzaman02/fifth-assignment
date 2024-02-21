@@ -15,16 +15,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+  <!-- Inter Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
   <style>
     .font-raleway {
       font-family: "Raleway", sans-serif;
       font-optical-sizing: auto;
     }
+
+    .font-inter {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-variation-settings:
+        "slnt" 0;
+    }
   </style>
 </head>
 
-<body class="mx-[3vw] font-raleway">
-  <header class="mt-3 mb-7">
+<body class="font-raleway">
+  <header class="mx-[3vw] mt-3 mb-7">
     <nav>
       <div class="bg-base-100 flex justify-between items-center">
         <div class="">
@@ -61,19 +71,20 @@
   </header>
   <main>
     <!-- banner section -->
-    <div class=" relative w-full h-auto">
+    <div class="mx-[3vw] relative">
       <img class="w-full h-full" src="images/banner.png" alt="">
       <div class="absolute w-full h-full text-center top-32 space-y-4">
         <h1 class="font-extrabold text-7xl text-white">End-to-End Travel with</h1>
         <h2 class="font-extrabold text-7xl justify-center text-[#1DD100]">P Paribahan</h2>
         <p class="text-white">Yes, you can run unit tests and view the results directly within the app. <br> The
           integrated testing features allow for a streamlined .</p>
-        <button class="text-[#030712] bg-[#1DD100] rounded-xl font-bold text-xl tracking-tighter py-5 px-7">Buy Tickets</button>
+        <button class="text-[#030712] bg-[#1DD100] rounded-xl font-bold text-xl tracking-tighter py-5 px-7">Buy
+          Tickets</button>
       </div>
     </div>
 
     <!-- Offer section -->
-    <section class="space-y-10">
+    <section class="mx-[3vw] space-y-10">
       <h1 class="text-center text-5xl mt-16">Best offers for you</h1>
       <div class="flex gap-10 text-center justify-center">
         <div class="flex gap-10 text-center justify-center bg-[#FFBF0F] rounded-xl">
@@ -100,52 +111,60 @@
         </div>
       </div>
       <div class="text-center">
-        <button class="py-5 px-7 border border-[#1DD100] text-[#1DD100] text-xl font-bold rounded-xl">See All Offers</button>
+        <button
+          class="py-5 w-[175px] border border-[#1DD100] text-[#1DD100] text-xl font-bold rounded-xl shadow-[inset_0_0_#1DD10000] hover:shadow-[inset_168px_0_#1DD100FF] hover:text-white hover:border-r-[red] duration-300">See
+          All Offers</button>
       </div>
     </section>
 
     <!-- paribahan section -->
-
-    <section class="w-full h-[605px]">
-      <div class="text-center mt-16">
-        <h1 class="font-semibold text-5xl text-black">P.H Paribahan</h1>
-        <p>Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing
+    <section class="bg-[#F7F8F8] w-full h-[605px] border-t-2 border-[rgb(29,209,0)] rounded-t-xl mt-16">
+      <div class="mx-[3vw] text-center mt-7">
+        <h1 class="font-bold text-4xl text-[#030712]">P.H Paribahan</h1>
+        <p class="text-lg text-[#03071299] mt-5 mb-7">Yes, you can run unit tests and view the results directly within
+          the app. The integrated <br> testing
           features
           allow for a streamlined .</p>
       </div>
 
-      <div class="flex justify-between">
-        <div>
+      <div class="mx-[3vw] flex justify-between bg-[#FFFFFF] rounded-xl">
+        <div class="space-y-7 p-8">
           <div class="flex w-[808px] h-[72px] justify-between p-2">
-            <div class="flex gap-10 w-[352px] h-[60px]">
+            <div class="flex gap-3 h-[60px]">
               <img src="images/bus-logo.png" alt="">
               <div>
-                <h1 class="font-bold text-2xl">Greenline Paribahan</h1>
-                <p>Coach-009-WEB ! AC_Business</p>
+                <h1 class="font-bold text-3xl">Greenline Paribahan</h1>
+                <p class="text-lg text-[#03071299] font-inter">Coach-009-WEB ! AC_Business</p>
               </div>
             </div>
-            <div class="flex justify-center items-center bg-green-200 w-[180px] h-[56px] rounded-lg">
+            <div class="flex justify-center gap-3 items-center bg-[#1DD10026] w-[180px] h-[56px] rounded-lg">
               <img src="images/seat-green.png" alt="">
-              <p class="text-[#1DD100">40 Seats left</p>
+              <p class="text-[#1DD100] text-lg font-medium">40 Seats left</p>
             </div>
           </div>
-          <div class="bg-gray-100 gap-y-5 w-[808px] h-[258px] p-10 rounded-lg space-y-12 text-xl font-semibold">
-            <div class="flex justify-between">
+          <div class="bg-[#F7F8F8] p-5 rounded-xl text-lg font-semibold">
+            <div class="flex justify-between items-center h-14">
               <p>Route</p>
               <p>Dhaka - Sylhet</p>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between items-center h-14 border-y border-dashed border-[#03071233]">
               <p>Departure Time</p>
               <p>9:00 PM</p>
             </div>
-            <div class="flex justify-between">
-              <p>Boarding Point - Laxmipur</p>
-              <p>Dropping Point - Bogura</p>
-              <p>Est. Time - 11 Hour</p>
+            <div class="flex justify-between items-center h-14 my-5">
+              <button class="bg-[#0307120D] py-5 px-7 rounded-xl font-inter text-base">
+                <p>Boarding Point - Laxmipur</p>
+              </button>
+              <button class="bg-[#0307120D] py-5 px-7 rounded-xl font-inter text-base">
+                <p>Dropping Point - Bogura</p>
+              </button>
+              <button class="bg-[#0307120D] py-5 px-7 rounded-xl font-inter text-base">
+                <p>Est. Time - 11 Hour</p>
+              </button>
             </div>
           </div>
         </div>
-        <img class="w-[80px]" src="images/info-devider.png" alt="">
+        <img class="w-[80px] h-full" src="images/info-devider.png" alt="">
         <div class=" flex flex-col items-center justify-center w-[300px]">
           <img src="images/fare.png" alt="">
           <h1 class="text-xl font-bold">550 Taka</h1>
