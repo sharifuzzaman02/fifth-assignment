@@ -14,7 +14,7 @@ function buyTicket(e) {
         selectedSeats.push(e.target.id); // save the seat's id to the selected seats list
 
         // add seat to the cart list
-        addToCart(e.target.id, e.target.innerText);
+        addSeatToCart(e.target.id, e.target.innerText);
     }
     else {
         ticket.classList.remove('bg-[#1DD100]', 'text-white'); // removing the green bg color and white font color
@@ -25,10 +25,13 @@ function buyTicket(e) {
         // remove seat from the cart list
         removeSeatFromCart(e.target.id);
     }
+
+    // update the cart items count
+    updateCartItemsCount();
 }
 
 // function to add seat to cart
-function addToCart(id, value) {
+function addSeatToCart(id, value) {
     const seatIdOnCart = `cart_${id}`;
     const cartList = document.getElementById('cartList');
 
@@ -57,11 +60,18 @@ function removeSeatFromCart(id){
 }
 
 
+// function to update count of cart items
+function updateCartItemsCount(){
+    const cartItemsCountOnCart = document.getElementById('countOfCartItems');
+    cartItemsCountOnCart.innerText = selectedSeats.length;
+}
+
+
 
 
 
 // seat blocks
-const seatBlocks = ['A', 'B', 'C', 'D']
+const seatBlocks = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 
 // add event listener for user click on each seat
 for (let seatBlock of seatBlocks) {
