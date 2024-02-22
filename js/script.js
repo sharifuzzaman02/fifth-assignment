@@ -43,25 +43,25 @@ function addSeatToCart(id, value) {
         <h2>${value}</h2>
         <p>Finance</p>
         <p>570</p>`;
-    
+
     // appending the new cart element to the existing cart list
     cartList.appendChild(newCartElement)
 }
 
 
 // function to remove seat from the cart list
-function removeSeatFromCart(id){
+function removeSeatFromCart(id) {
     const seatIdOnCart = `cart_${id}`;
     const cartList = document.getElementById('cartList');
 
     const seatInfoElemOnCart = document.getElementById(seatIdOnCart);
     cartList.removeChild(seatInfoElemOnCart);
-    
+
 }
 
 
 // function to update count of cart items
-function updateCartItemsCount(){
+function updateCartItemsCount() {
     const cartItemsCountOnCart = document.getElementById('countOfCartItems');
     cartItemsCountOnCart.innerText = selectedSeats.length;
 }
@@ -81,3 +81,80 @@ for (let seatBlock of seatBlocks) {
         seat.addEventListener('click', buyTicket);
     }
 }
+
+
+// adding elements to passenger-info-form
+{/* <div class="space-y-3">
+            <h1 class="font-bold text-base">Passenger Name*</h1>
+            <input class="font-medium text-base p-6 rounded-lg w-full border-2" type="text" name="" id=""
+              placeholder="Enter your name">
+          </div> */}
+
+/* const passengerInfoForm = document.getElementById('passenger-info-form'); */
+
+/* const newElement = document.createElement('div');
+newElement.classList.add('space-y-3');
+newElement.innerHTML = `
+            <h1 class="font-bold text-base">Passenger Name*</h1>
+            <input class="font-medium text-base p-6 rounded-lg w-full border-2" type="text" name="" id=""
+              placeholder="Enter your name">
+`;
+passengerInfoForm.appendChild(newElement); */
+
+/* const phoneNumberElement = document.createElement('div');
+phoneNumberElement.classList.add('space-y-3');
+phoneNumberElement.innerHTML = `
+            <h1 class="font-bold text-base">Phone Number*</h1>
+            <input class="font-medium text-base p-6 rounded-lg w-full border-2" type="text" name="" id=""
+              placeholder="Enter your phone number">
+`;
+passengerInfoForm.appendChild(phoneNumberElement);
+ */
+
+
+const passengerInfoForm = document.getElementById('passenger-info-form');
+
+const formInfo = [
+    {
+        title: 'Passenger Name*',
+        placeholder: 'name',
+    },
+    {
+        title: 'Phone Number*',
+        placeholder: 'phone number',
+    },
+    {
+        title: 'Email ID',
+        placeholder: 'email id',
+    }
+]
+
+
+
+function addElemToForm(title, placeholder){
+    const newElement = document.createElement('div');
+    newElement.classList.add('space-y-3');
+    newElement.innerHTML = `
+            <h1 class="font-bold text-base">${title}</h1>
+            <input class="font-medium text-base p-6 rounded-lg w-full border-2" type="text" name="" id=""
+              placeholder="Enter your ${placeholder}">
+`;
+    passengerInfoForm.appendChild(newElement);
+}
+
+
+
+for (let elemInfo of formInfo) {
+    /* const newElement = document.createElement('div');
+    newElement.classList.add('space-y-3');
+    newElement.innerHTML = `
+            <h1 class="font-bold text-base">${elemInfo.title}</h1>
+            <input class="font-medium text-base p-6 rounded-lg w-full border-2" type="text" name="" id=""
+              placeholder="Enter your ${elemInfo.placeholder}">
+`;
+    passengerInfoForm.appendChild(newElement); */
+    addElemToForm(elemInfo.title, elemInfo.placeholder);
+}
+
+
+
